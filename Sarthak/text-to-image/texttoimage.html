@@ -1,1 +1,49 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="texttoimage.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <img src="logo 2.png" alt="Astronix Logo" class="logo">
+            <div class="image-placeholder">
+                <img src="bg.jpeg" alt="Background Image" class="background-image">
+            </div>
+        </header>
+        <div class="button-panel">
+            <div class="button">
+                <div class="icon"><img src="voice-talk.png" alt="Voice Talk Icon" class="features"></div>
+                <div class="label">Voice Talk</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="image-generator.png" alt="Image Generator Icon" class="features"></div>
+                <div class="label">Image Generator</div>
+            </div>
+            <div class="button active">
+                <div class="icon"><img src="ai-chat.png" alt="AI Chat Icon" class="features"></div>
+                <div class="label">AI Chat</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="video-generator.png" alt="Video Generator Icon" class="features"></div>
+                <div class="label">Video Generator</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="music-generator.png" alt="Music Generator Icon" class="features"></div>
+                <div class="label">Music Generator</div>
+            </div>
+        </div>
+        <div class="greeting">
+            <h1>What Will You <span>Create...</span></h1>
+        </div>
+        <div class="input-section">
+            <input type="text" id="input" placeholder="Describe what you want to see......"> 
+        </div>
+        <button id="btn"><b>Generate</b></button>
+            <div id="image"></div>
+    <script src="texttoimage.js"></script>
+</body>
+</html>
