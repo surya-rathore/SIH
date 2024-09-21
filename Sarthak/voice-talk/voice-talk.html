@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="voice-talk.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <img src="logo 2.png" alt="Astronix Logo" class="logo">
+            <div class="image-placeholder"> <img src="1.jpeg" alt="Astronix Logo" class="background-image"></div>
+        </header>
+        <div class="button-panel">
+            <div class="button">
+                <div class="icon"><img src="voice-talk.png" alt="" class="features"></div>
+                <div class="label">Voice Talk</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="image-generator.png" alt="" class="features"></div>
+                <div class="label">Image Generator</div>
+            </div>
+            <div class="button active">
+                <div class="icon"><img src="ai-chat.png" alt="" class="features"></div>
+                <div class="label">Ai Chat</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="video-generator.png" alt="" class="features"></div>
+                <div class="label">Video Generator</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="music-generator.png" alt="" class="features"></div>
+                <div class="label">Music Generator</div>
+            </div>
+        </div>
+        <div class="greeting">
+            <h1>Lets talk <span><b>together...</b></span></h1>
+        </div>
+        <div id="btn">
+            <button class="pulse"> <img src="voice talk.jpg" class="bg" onclick="processAction()"></button>
+        </div>
+        <img src="loader-image.gif" alt="voice" id="voice">
+</body>
+<script src="voice-talk.js"></script>
+</html>

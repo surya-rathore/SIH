@@ -1,0 +1,195 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dashboard {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 290px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.image-placeholder {
+    width: 500px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50px;
+    margin-right: 50px;
+}
+
+.background-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 35px;
+    margin-right: 50px;
+}
+
+.features {
+    height: 50px;
+    width: 50px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px;
+
+}
+
+.button-panel {
+    display: flex;
+    justify-content: center;
+    background-color: #252525;
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button .icon {
+    font-size: 24px;
+    color: #00E0FF;
+
+}
+
+.button .label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button.active {
+    background: linear-gradient(135deg, #ff00e5, #00e5ff);
+    box-shadow: 0 0 15px #00e5ff;
+
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.greeting h1 {
+    color: #929292;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 10px 0;
+    animation: textGlow 2s infinite alternate;
+    margin-bottom: 0%;
+}
+
+.greeting h1 span {
+    color: #00e5ff;
+    margin-bottom: 0%;
+    background: linear-gradient(90deg, #FF00D6, #00DFFD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* these code are voice talk buttton function*/
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    place-items: center;
+}
+
+.pulse {
+    border: 0;
+    height: 120px;
+    width: 120px;
+    margin-top: 70px;
+    margin-left: 350px;
+    background: linear-gradient(#ff00b3, #0088ff);
+    position: absolute;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.pulse:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #00DFFD;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.pulse:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FF00D6;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.pulse:before {
+    animation: pulse 2s ease-out infinite;
+}
+
+.pulse:after {
+    animation: pulse 2s 1s ease-out infinite;
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+#voice{
+    display: flex;
+    display: none;
+    margin-left: 310px;
+    margin-top: 30px;
+    position: absolute;
+    height: 200px;
+width: 200px;
+
+}
+
