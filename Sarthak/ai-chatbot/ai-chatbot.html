@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="ai-chatbot.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <img src="logo 2.png" alt="Astronix Logo" class="logo">
+            <div class="image-placeholder"> <img src="1.jpeg" alt="Astronix Logo" class="background-image"></div>
+        </header>
+        <div class="button-panel">
+            <div class="button">
+                <div class="icon"><img src="voice-talk.png" alt="" class="features"></div>
+                <div class="label">Voice Talk</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="image-generator.png" alt="" class="features"></div>
+                <div class="label">Image Generator</div>
+            </div>
+            <div class="button active">
+                <div class="icon"><img src="ai-chat.png" alt="" class="features"></div>
+                <div class="label">Ai Chat</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="video-generator.png" alt="" class="features"></div>
+                <div class="label">Video Generator</div>
+            </div>
+            <div class="button">
+                <div class="icon"><img src="music-generator.png" alt="" class="features"></div>
+                <div class="label">Music Generator</div>
+            </div>
+        </div>
+        <div class="greeting">
+            <h1>Hello, <span>there</span></h1>
+            <p>How can I help you today...</p>
+        </div>
+        <div class="input-section">
+            <input type="text" id="speechInput" placeholder="Enter a prompt here...">
+            <button class="send-button">➦</button>
+            <button id="micButton" class="mic-button">🎤</button>
+            <button class="image-recognition">🪄</button>
+        </div>
+        <div class="suggestions">
+            <div class="suggestion">"Need help? Ask me anything."</div>
+            <div class="suggestion">"Ask me to translate words or phrases."</div>
+            <div class="suggestion">"Get help with software or hardware problems."</div>
+            <div class="suggestion">"I'm ready to help. Feel free to ask."</div>
+        </div>
+    </div>
+    <script src="ai-chatbot.js"></script>
+</body>
+
+</html>
