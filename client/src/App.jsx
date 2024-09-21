@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import SignupAndLogin from './components/userSignup'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
+import Signup from './components/userSignup';
+import Dashboard from './components/talkwithAi';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <SignupAndLogin/>
-    </>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/userSignup" element={<Signup />} />
+                <Route path="/" element={<Dashboard />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;

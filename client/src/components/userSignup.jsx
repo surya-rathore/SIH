@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './userSignup.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const UserSignup = () => {
   const [name, setName] = useState("");
@@ -32,11 +33,13 @@ const UserSignup = () => {
         password, 
         conPassword 
     };
+    const navigate = useNavigate(); 
 
     // Send POST request to the server
     axios.post('http://localhost:4011/userSignup', Userdata)
         .then(response => {
-            console.log(response.data); 
+            console.log(response.data);
+            navigate('/talkwithAi'); 
         })
         .catch(error => {
             console.error("There was an error creating the account!", error);
