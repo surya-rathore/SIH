@@ -10,6 +10,8 @@ const UserSignup = () => {
   const [conPassword, setConPassword] = useState("");
   const [isSignUpMode, setSignUpMode] = useState(false);  // Manage mode
 
+
+  const navigate = useNavigate();
   const handleRegisterClick = () => {
     setSignUpMode(true);
   };
@@ -33,7 +35,7 @@ const UserSignup = () => {
         password, 
         conPassword 
     };
-    const navigate = useNavigate(); 
+     
 
     // Send POST request to the server
     axios.post('http://localhost:4011/userSignup', Userdata)

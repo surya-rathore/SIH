@@ -41,8 +41,6 @@ exports.userLogin = async (req, res) => {
            return res.status(401).send("massege: password not match");
         }
         return res.status(201).send("massege: login sucessful")
-
-    res.status(201).json({ message: "User created successfully" });
   } catch (error) {
     console.log("error", error);
     res.status(500).json({ message: "Server Error" });
