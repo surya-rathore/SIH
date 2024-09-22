@@ -1,17 +1,19 @@
 const express = require("express");
 const cors = require("cors");
+const bodyParser=require("body-parser");
 const session = require("express-session");
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT ;
 
 
-require("./config/db"); 
-// const productrouter = require("./routes/addproduct");
-const router = require("./routes/userRouter");
+require("./config/db");
+const router = require("./routers/userRouter");
+// const talkrouter=require("./routers/talkRouter");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '10mb' }));
 
 // Session setup
 app.use(session({
@@ -21,7 +23,7 @@ app.use(session({
 }));
 
 app.use(router);
-// app.use(productrouter);
+
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
